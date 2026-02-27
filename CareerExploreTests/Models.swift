@@ -16,6 +16,8 @@ struct Career: Identifiable, Codable, Hashable {
     var id: UUID
     var title: String
     var overview: String
+    var yearsInSchool: Int
+    var skills: [String]
     var steps: [String]
     var parentTips: [String]
 }
@@ -58,6 +60,8 @@ enum SampleData {
                     id: UUID(uuidString: "AAAAAAAA-AAAA-AAAA-AAAA-AAAAAAAAA001")!,
                     title: "Registered Nurse",
                     overview: "RNs support patients, coordinate care, and educate families.",
+                    yearsInSchool: 2,
+                    skills: ["Biology", "Communication"],
                     steps: [
                         "Take biology and chemistry in high school",
                         "Earn a nursing degree (ADN or BSN)",
@@ -73,6 +77,8 @@ enum SampleData {
                     id: UUID(uuidString: "AAAAAAAA-AAAA-AAAA-AAAA-AAAAAAAAA002")!,
                     title: "Medical Assistant",
                     overview: "Assist with exams, take vitals, and manage clinic tasks.",
+                    yearsInSchool: 1,
+                    skills: ["Organization", "Clinical basics"],
                     steps: [
                         "Focus on communication and organization",
                         "Complete a medical assisting program",
@@ -95,6 +101,8 @@ enum SampleData {
                     id: UUID(uuidString: "BBBBBBBB-BBBB-BBBB-BBBB-BBBBBBBBB001")!,
                     title: "iOS Developer",
                     overview: "Design and build apps for iPhone and iPad.",
+                    yearsInSchool: 2,
+                    skills: ["Swift", "SwiftUI"],
                     steps: [
                         "Learn Swift basics",
                         "Build small SwiftUI projects",
@@ -110,6 +118,8 @@ enum SampleData {
                     id: UUID(uuidString: "BBBBBBBB-BBBB-BBBB-BBBB-BBBBBBBBB002")!,
                     title: "Data Analyst",
                     overview: "Turn raw data into insights and stories.",
+                    yearsInSchool: 2,
+                    skills: ["Spreadsheets", "SQL"],
                     steps: [
                         "Strengthen math and spreadsheets",
                         "Learn a data tool (Python, SQL)",
@@ -124,38 +134,83 @@ enum SampleData {
             ]
         ),
         Industry(
-            id: UUID(uuidString: "CCCCCCCC-CCCC-CCCC-CCCC-CCCCCCCCCCCC")!,
-            name: "Creative Arts",
-            summary: "Expressing ideas through design and media.",
+            id: UUID(uuidString: "DDDDDDDD-DDDD-DDDD-DDDD-DDDDDDDDDDDD")!,
+            name: "Business",
+            summary: "Building and managing organizations and products.",
             careers: [
                 Career(
-                    id: UUID(uuidString: "CCCCCCCC-CCCC-CCCC-CCCC-CCCCCCCCCC01")!,
-                    title: "Graphic Designer",
-                    overview: "Create visuals for brands, apps, and products.",
+                    id: UUID(uuidString: "DDDDDDDD-DDDD-DDDD-DDDD-DDDDDDDDD001")!,
+                    title: "Marketing Coordinator",
+                    overview: "Plan campaigns, analyze results, and support brand growth.",
+                    yearsInSchool: 4,
+                    skills: ["Communication", "Analytics"],
                     steps: [
-                        "Learn design basics and color theory",
-                        "Practice with free design tools",
-                        "Build a small portfolio",
-                        "Offer to design for school clubs"
+                        "Learn basics of marketing and branding",
+                        "Practice with social media and analytics",
+                        "Work on a small campaign project",
+                        "Build a simple portfolio"
                     ],
                     parentTips: [
-                        "Provide constructive feedback",
-                        "Encourage sharing work with others"
+                        "Discuss how ads influence decisions",
+                        "Encourage clear writing and presentations"
                     ]
                 ),
                 Career(
-                    id: UUID(uuidString: "CCCCCCCC-CCCC-CCCC-CCCC-CCCCCCCCCC02")!,
-                    title: "Video Editor",
-                    overview: "Tell stories by editing footage and audio.",
+                    id: UUID(uuidString: "DDDDDDDD-DDDD-DDDD-DDDD-DDDDDDDDD002")!,
+                    title: "Project Manager",
+                    overview: "Organize teams, timelines, and budgets to deliver results.",
+                    yearsInSchool: 4,
+                    skills: ["Organization", "Leadership"],
                     steps: [
-                        "Capture clips with a phone",
-                        "Learn a simple editing app",
-                        "Practice pacing and audio",
-                        "Edit a short story or recap"
+                        "Practice planning and time management",
+                        "Learn basic project tools (Kanban, Gantt)",
+                        "Lead a small team project",
+                        "Document outcomes and lessons learned"
                     ],
                     parentTips: [
-                        "Watch short films together",
-                        "Discuss storytelling choices"
+                        "Support planning habits at home",
+                        "Celebrate team-based achievements"
+                    ]
+                )
+            ]
+        ),
+        Industry(
+            id: UUID(uuidString: "EEEEEEEE-EEEE-EEEE-EEEE-EEEEEEEEEEEE")!,
+            name: "Education",
+            summary: "Teaching, mentoring, and supporting student growth.",
+            careers: [
+                Career(
+                    id: UUID(uuidString: "EEEEEEEE-EEEE-EEEE-EEEE-EEEEEEEEE001")!,
+                    title: "Elementary School Teacher",
+                    overview: "Teach core subjects and support young learners.",
+                    yearsInSchool: 4,
+                    skills: ["Communication", "Patience"],
+                    steps: [
+                        "Study education and child development",
+                        "Complete student teaching",
+                        "Earn a teaching credential",
+                        "Start in a classroom or tutoring role"
+                    ],
+                    parentTips: [
+                        "Encourage reading and mentoring",
+                        "Support classroom volunteering"
+                    ]
+                ),
+                Career(
+                    id: UUID(uuidString: "EEEEEEEE-EEEE-EEEE-EEEE-EEEEEEEEE002")!,
+                    title: "School Counselor",
+                    overview: "Guide students with academics, careers, and well-being.",
+                    yearsInSchool: 6,
+                    skills: ["Listening", "Problem Solving"],
+                    steps: [
+                        "Earn a bachelor’s degree",
+                        "Complete a counseling master’s program",
+                        "Gain internship experience",
+                        "Obtain state certification"
+                    ],
+                    parentTips: [
+                        "Discuss emotional well-being",
+                        "Normalize asking for help"
                     ]
                 )
             ]
